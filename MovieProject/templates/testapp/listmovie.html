@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{%load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static "css/all.css" %}">
+  </head>
+  <body>
+
+    <div class="container" align="center">
+  <div class="jumbotron" >
+
+  <div class="container">
+    <h1> List of Movies</h1>
+    {% if form %}
+    <table border='5'>
+      <thead>
+      <th>id</th>
+      <th>Name</th>
+      <th>Hero</th>
+      <th>Heroine</th>
+      </thead>
+{% for forms in form %}
+
+<tr><td>{{forms.id}}
+  <td>{{forms.name}}
+    <td>{{forms.hero}}
+    <td>{{forms.heroine}}
+{% endfor %}
+</table>
+    {% endif %}
+    <a class="btn btn-primary btn-lg" href="/Movie" role="button">Back To Home Page</a>
+</div>
+</div>
+</div>
+  </body>
+</html>
