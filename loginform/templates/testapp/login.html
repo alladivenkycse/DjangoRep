@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method='POST' >
+
+    
+      {% if sent %}
+      <h1> Thanks for Providning Data.Please  Enter Anther Student</h1>
+      {% else %}
+        <h1>Login Form</h1><hr>
+      {% endif %}
+      <table><tr>
+        <td>  {{form.as_table}}
+          {% csrf_token %}</td>
+        </tr></table>
+          <input type="submit" class="btn btn-lg btn-primary" name="submit" value="submit">
+            </form>
+
+
+
+  </body>
+</html>
